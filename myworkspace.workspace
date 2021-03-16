@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="myworkspace" Database="" Version="10.0.0">
+  <Project Name="test12" Path="test12/test12.project" Active="No"/>
+  <Project Name="lab4" Path="Lab_4/Lab_4.project" Active="No"/>
+  <Project Name="assignment_2" Path="assignment_2/assignment_2.project" Active="No"/>
+  <Project Name="lab_5" Path="lab_5/lab_5.project" Active="No"/>
+  <Project Name="Lab_6_part_1" Path="Lab_6_part_1/Lab_6_part_1.project" Active="No"/>
+  <Project Name="Lab_7" Path="Lab_7/Lab_7.project" Active="No"/>
+  <Project Name="Lab_8" Path="Lab_8/Lab_8.project" Active="No"/>
+  <Project Name="Lab_9" Path="Lab_9/Lab_9.project" Active="No"/>
+  <Project Name="assignmnet_3" Path="assignmnet_3/assignmnet_3.project" Active="No"/>
+  <Project Name="Lab_10" Path="Lab_10/Lab_10.project" Active="No"/>
+  <Project Name="extra_credit" Path="extra_credit/extra_credit.project" Active="No"/>
+  <Project Name="Lab_11" Path="Lab_11/Lab_11.project" Active="No"/>
+  <Project Name="Lab_12" Path="Lab_12/Lab_12.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="test12" ConfigName="Debug"/>
+      <Project Name="lab4" ConfigName="Debug"/>
+      <Project Name="assignment_2" ConfigName="Debug"/>
+      <Project Name="lab_5" ConfigName="Debug"/>
+      <Project Name="Lab_6_part_1" ConfigName="Debug"/>
+      <Project Name="Lab_7" ConfigName="Debug"/>
+      <Project Name="Lab_8" ConfigName="Debug"/>
+      <Project Name="Lab_9" ConfigName="Debug"/>
+      <Project Name="assignmnet_3" ConfigName="Debug"/>
+      <Project Name="Lab_10" ConfigName="Debug"/>
+      <Project Name="extra_credit" ConfigName="Debug"/>
+      <Project Name="Lab_11" ConfigName="Debug"/>
+      <Project Name="Lab_12" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="test12" ConfigName="Release"/>
+      <Project Name="lab4" ConfigName="Release"/>
+      <Project Name="assignment_2" ConfigName="Release"/>
+      <Project Name="lab_5" ConfigName="Release"/>
+      <Project Name="Lab_6_part_1" ConfigName="Release"/>
+      <Project Name="Lab_7" ConfigName="Release"/>
+      <Project Name="Lab_8" ConfigName="Release"/>
+      <Project Name="Lab_9" ConfigName="Release"/>
+      <Project Name="assignmnet_3" ConfigName="Release"/>
+      <Project Name="Lab_10" ConfigName="Release"/>
+      <Project Name="extra_credit" ConfigName="Release"/>
+      <Project Name="Lab_11" ConfigName="Release"/>
+      <Project Name="Lab_12" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

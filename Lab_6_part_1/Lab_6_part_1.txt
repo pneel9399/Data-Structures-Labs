@@ -1,0 +1,1 @@
+Debug/checks_lists.cpp.o Debug/node1.cpp.o Debug/up_lab_6_part_2_bag3.cpp.o Debug/up_lab_6_part_2_main.cpp.o   

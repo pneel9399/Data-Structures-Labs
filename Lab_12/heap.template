@@ -1,0 +1,103 @@
+template <class T>
+heap<T>::heap()
+{
+	
+}
+
+template <class T>
+unsigned int heap<T>::size() const
+{
+	return v.size();
+}
+
+template<class T>
+bool heap<T>::is_empty() const
+{
+	if(size() == 0)
+		return true;
+	return false;
+}
+
+template<class T>
+void heap<T>::insert (const T& item)
+{
+	v.push_back(item);
+	unsigned int childIndex = size() - 1;
+	unsigned int parentIndex =(childIndex - 1)/2;
+	if(parentIndex < 0)
+	return;
+	while(childIndex > 0)
+	{
+		if(v[parentIndex] < v[childIndex])
+		{
+			T temporary = v[parentIndex];
+			v[parentIndex] = v[childIndex];
+			v[childIndex] = temporary;
+			childIndex = parentIndex;
+			
+			parentIndex = (childIndex - 1)/2;
+		}
+		else
+		{
+			break;
+		}
+	}
+}
+
+template <class T>
+void heap<T>::remove()
+{
+	if(!is_empty())
+	{
+		v[0] = v[v.size() - 1];
+		v.erase(v.begin() + v.size() - 1);
+		unsigned int childIndex = 0;
+		unsigned int parentIndex = 0;
+		while(size() > parentIndex * 2 + 1)
+		{
+			childIndex = max_child(parentIndex);
+			if(v[childIndex] > v[parentIndex])
+			{
+				T temporary = v[parentIndex];
+				v[parentIndex] = v[childIndex];
+				v[childIndex] = temporary;
+				parentIndex = childIndex;
+			}
+			else
+			break;
+		}
+	}
+}
+
+template <class T>
+T heap<T>::max() const
+{
+	if(!is_empty())
+		return v[0];
+}
+
+template <class T>
+T& heap<T>::max()
+{
+	if(!is_empty())
+		return v[0];
+}
+
+template <class T>
+unsigned int heap<T>::max_child(unsigned int index) const
+{
+	unsigned int leftChild = index *2+1;
+	unsigned int rightChild = index *2+2;
+	if(v.size() > leftChild)
+	{
+		if(v.size() > rightChild)
+		{
+			if(v[leftChild] > v[rightChild])
+			return leftChild;
+			else
+			return rightChild;
+		}
+		else
+		return leftChild;
+	}
+}

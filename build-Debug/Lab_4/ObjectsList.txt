@@ -1,0 +1,1 @@
+../build-Debug/Lab_4/sequence_exam2.cpp.o ../build-Debug/Lab_4/sequence2.cpp.o   

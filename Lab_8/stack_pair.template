@@ -1,0 +1,138 @@
+#include <cassert>  
+#include <cstdlib> 
+
+template <class T>
+stack_pair<T>::stack_pair()
+{
+	cursor_a = 0;
+	cursor_b = 29;
+	capacity = 30;
+	used = 0;
+	data = new T[DEFAULT_CAPACITY];
+}
+template <class T>
+stack_pair<T>::stack_pair(size_type intial_capacity)
+{
+	data = new T[intial_capacity];
+	cursor_a = 0;
+	cursor_b = intial_capacity -1;
+	capacity = intial_capacity;
+	used = 0;
+}
+
+template <class T>
+void stack_pair<T>::push_a(T item)
+{
+	if(!is_full_a())
+	{
+		data[cursor_a] = item;
+		cursor_a++;
+		used++;
+	}
+	else
+		std::cout<<"Your stack is full."<<std::endl;
+}
+
+template <class T>
+void stack_pair<T>::push_b(T item)
+{
+	if(!is_full_b())
+	{
+		data[cursor_b] = item;
+		cursor_b --;
+		used++;
+	}
+	else
+		std::cout<<"Your stack is full."<<std::endl;
+}
+
+template <class T>
+T stack_pair<T>::pop_a()
+{
+		T e = data[cursor_a-1];
+	if(!is_empty_a())
+	{
+		for(int i = (int)cursor_a; i <capacity; i++)
+		data[i-1] = data[i];
+		cursor_a--;
+		used--;
+		capacity--;
+	}
+		else
+		std::cout<<"Your stack is empty."<<std::endl;
+		return e;
+}
+
+template <class T>
+T stack_pair<T>::pop_b()
+{
+	T e = data[cursor_b+1];
+	if(!is_empty_b())
+	{
+	for(int i = (int)cursor_b+1; i <capacity; i++)
+	data[i] = data[i+1];
+	cursor_b--;
+	capacity--;
+	used--;
+	}
+	else
+		std::cout<<"Your stack is empty."<<std::endl;
+	return e;
+}
+
+template <class T>
+size_t stack_pair<T>::size_a()
+{
+	return cursor_a;
+}
+
+template <class T>
+size_t stack_pair<T>::size_b()
+{
+	return cursor_b;
+}
+
+template<class T>
+bool stack_pair<T>::is_full_a() const
+{
+	return(used == capacity);
+}
+
+template<class T>
+bool stack_pair<T>::is_full_b() const
+{
+	 return(used == capacity);
+}
+
+template<class T>
+bool stack_pair<T>::is_empty_a() const
+{
+	return (used == 0);
+}
+
+template<class T>
+bool stack_pair<T>::is_empty_b() const
+{
+	return (used == 0);
+}
+
+template<class T>
+void stack_pair<T>::print_stack() const
+{
+	for(int i =0; i < (int)capacity; i++)
+	{
+		std::cout<<data[i]<<"  ";
+	}
+	std::cout<<" " <<std::endl; 
+}
+template<class T>
+bool stack_pair<T>::stack_contains(T item) const
+{
+	bool contains = false;
+	for(int i =0; i < (int)capacity; i++)
+	{
+		if(data[i] == item)
+			contains = true;
+	}
+	return contains;
+}
